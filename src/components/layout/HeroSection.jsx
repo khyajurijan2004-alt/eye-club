@@ -1,4 +1,8 @@
+import { useState } from 'react'
+
 const HeroSection = () => {
+  const [hoveredBtn, setHoveredBtn] = useState(null)
+
   return (
     <section style={{ backgroundColor: '#F5F0E8', padding: '60px 80px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', minHeight: '90vh' }}>
 
@@ -17,10 +21,28 @@ const HeroSection = () => {
         </p>
 
         <div style={{ display: 'flex', gap: '16px' }}>
-          <button style={{ backgroundColor: '#0A0A0A', color: '#fff', padding: '14px 28px', fontSize: '14px', letterSpacing: '2px', cursor: 'pointer', border: 'none' }}>
+          <button
+            onMouseEnter={() => setHoveredBtn(0)}
+            onMouseLeave={() => setHoveredBtn(null)}
+            style={{
+              backgroundColor: hoveredBtn === 0 ? '#C9A84C' : '#0A0A0A',
+              color: '#fff',
+              padding: '14px 28px', fontSize: '14px', letterSpacing: '2px',
+              cursor: 'pointer', border: 'none',
+              transition: 'background-color 0.2s',
+            }}>
             SHOP NOW
           </button>
-          <button style={{ backgroundColor: 'transparent', color: '#0A0A0A', padding: '14px 28px', fontSize: '14px', letterSpacing: '2px', cursor: 'pointer', border: '1px solid #0A0A0A' }}>
+          <button
+            onMouseEnter={() => setHoveredBtn(1)}
+            onMouseLeave={() => setHoveredBtn(null)}
+            style={{
+              backgroundColor: hoveredBtn === 1 ? '#0A0A0A' : 'transparent',
+              color: hoveredBtn === 1 ? '#fff' : '#0A0A0A',
+              padding: '14px 28px', fontSize: '14px', letterSpacing: '2px',
+              cursor: 'pointer', border: '1px solid #0A0A0A',
+              transition: 'background-color 0.2s, color 0.2s',
+            }}>
             VIEW CATALOG
           </button>
         </div>

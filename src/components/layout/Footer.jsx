@@ -4,13 +4,13 @@ const Footer = () => {
 
       {/* Elite Access - Newsletter */}
       <div style={{ backgroundColor: '#F5F0E8', padding: '60px 80px', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '32px', fontWeight: 'bold', letterSpacing: '4px', color: '#C9A84C', fontStyle: 'italic', marginBottom: '12px' }}>
+        <h2 style={{ fontSize: '32px', fontWeight: 'bold', letterSpacing: '4px', color: '#C9A84C', fontStyle: 'italic', marginBottom: '12px', fontFamily: 'Georgia, serif' }}>
           ELITE ACCESS
         </h2>
         <p style={{ fontSize: '14px', color: '#666', marginBottom: '32px' }}>
           Sign up for early access to limited edition drops and luxury styling tips.
         </p>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '0' }}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
           <input
             type="email"
             placeholder="ENTER YOUR EMAIL"
@@ -31,16 +31,16 @@ const Footer = () => {
           <p style={{ fontSize: '14px', color: '#666', lineHeight: '1.7', maxWidth: '260px' }}>
             Crafting the future of vision through high-contrast design and artificial intelligence. Nepal's premier luxury eyewear boutique.
           </p>
-          <div style={{ display: 'flex', gap: '12px', marginTop: '20px' }}>
-            <span style={{ cursor: 'pointer', fontSize: '18px' }}>↻</span>
-            <span style={{ cursor: 'pointer', fontSize: '18px' }}>↗</span>
-            <span style={{ cursor: 'pointer', fontSize: '18px' }}>◎</span>
+          <div style={{ display: 'flex', gap: '16px', marginTop: '24px' }}>
+            <span style={{ cursor: 'pointer', fontSize: '16px', color: '#0A0A0A' }}>𝕏</span>
+            <span style={{ cursor: 'pointer', fontSize: '16px', color: '#0A0A0A' }}>in</span>
+            <span style={{ cursor: 'pointer', fontSize: '16px', color: '#0A0A0A' }}>◎</span>
           </div>
         </div>
 
         {/* Shop */}
         <div>
-          <div style={{ fontSize: '12px', fontWeight: '700', letterSpacing: '3px', marginBottom: '20px' }}>SHOP</div>
+          <div style={{ fontSize: '12px', fontWeight: '700', letterSpacing: '3px', marginBottom: '20px', color: '#0A0A0A' }}>SHOP</div>
           {["Men's Optical", "Women's Optical", "Sunglasses", "New Arrivals", "Limited Edition"].map((item, i) => (
             <div key={i} style={{ fontSize: '14px', color: '#666', marginBottom: '12px', cursor: 'pointer' }}>{item}</div>
           ))}
@@ -48,7 +48,7 @@ const Footer = () => {
 
         {/* Services */}
         <div>
-          <div style={{ fontSize: '12px', fontWeight: '700', letterSpacing: '3px', marginBottom: '20px' }}>SERVICES</div>
+          <div style={{ fontSize: '12px', fontWeight: '700', letterSpacing: '3px', marginBottom: '20px', color: '#0A0A0A' }}>SERVICES</div>
           {["AI Face Scan", "Virtual Try-On", "Eye Appointments", "Home Trial", "Lens Quiz"].map((item, i) => (
             <div key={i} style={{ fontSize: '14px', color: '#666', marginBottom: '12px', cursor: 'pointer' }}>{item}</div>
           ))}
@@ -56,7 +56,7 @@ const Footer = () => {
 
         {/* Support */}
         <div>
-          <div style={{ fontSize: '12px', fontWeight: '700', letterSpacing: '3px', marginBottom: '20px' }}>SUPPORT</div>
+          <div style={{ fontSize: '12px', fontWeight: '700', letterSpacing: '3px', marginBottom: '20px', color: '#0A0A0A' }}>SUPPORT</div>
           {["Shipping & Returns", "Warranty Info", "FAQs", "Contact Us", "Store Locator"].map((item, i) => (
             <div key={i} style={{ fontSize: '14px', color: '#666', marginBottom: '12px', cursor: 'pointer' }}>{item}</div>
           ))}
@@ -66,7 +66,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div style={{ backgroundColor: '#fff', borderTop: '1px solid #eee', padding: '20px 80px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span style={{ fontSize: '12px', color: '#aaa' }}>© 2024 EYE CLUB LUXURY EYEWEAR. ALL RIGHTS RESERVED.</span>
+        <span style={{ fontSize: '12px', color: '#aaa' }}>© 2025 EYE CLUB LUXURY EYEWEAR. ALL RIGHTS RESERVED.</span>
         <div style={{ display: 'flex', gap: '16px' }}>
           <span style={{ fontSize: '12px', color: '#aaa', cursor: 'pointer' }}>FB</span>
           <span style={{ fontSize: '12px', color: '#aaa', cursor: 'pointer' }}>IG</span>

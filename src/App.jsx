@@ -1,30 +1,13 @@
-import Navbar from './components/layout/Navbar'
-import HeroSection from './components/layout/HeroSection'
-import FeaturesBar from './components/layout/FeaturesBar'
-import FitSection from './components/layout/FitSection'
-import BoutiqueSection from './components/layout/BoutiqueSection'
-import CollectionsSection from './components/layout/CollectionsSection'
-import LensQuiz from './components/layout/LensQuiz'
-import HomeTrial from './components/layout/HomeTrial'
-import BestSellers from './components/layout/BestSellers'
-import Footer from './components/layout/Footer'
-
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import ServicesPage from './pages/ServicesPage'
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <HeroSection />
-      <FeaturesBar />
-      <FitSection />
-      <BoutiqueSection />
-      <CollectionsSection />
-      <LensQuiz />
-      <HomeTrial />
-      <BestSellers />
-      <Footer />
-      
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/services" element={<ServicesPage />} />
+    </Routes>
   )
 }
 

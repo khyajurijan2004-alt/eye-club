@@ -7,12 +7,18 @@ const HeroSection = () => {
     <section style={{ backgroundColor: '#F5F0E8', padding: '60px 80px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', minHeight: '90vh', gap: '40px' }}>
 
       {/* Left Content */}
-      <div style={{ maxWidth: '480px' }}>
-        <h1 style={{ fontSize: '64px', fontWeight: '700', lineHeight: '1.05', color: '#0A0A0A', marginBottom: '24px', fontFamily: 'Cormorant Garamond, serif' }}>
-          See the world in{' '}
-          <span style={{ color: '#C9A84C', fontStyle: 'italic' }}>
-            extraordinary
-          </span>{' '}
+      <div style={{ maxWidth: '420px' }}>
+        <h1 style={{
+          fontSize: '56px',
+          fontWeight: '600',
+          lineHeight: '1.05',
+          color: '#0A0A0A',
+          marginBottom: '24px',
+          fontFamily: 'Bodoni Moda, serif',
+          letterSpacing: '-1px',
+        }}>
+          See the world in<br />
+          <span style={{ color: '#C9A84C', fontStyle: 'italic' }}>extraordinary</span><br />
           style
         </h1>
 
@@ -30,6 +36,7 @@ const HeroSection = () => {
               padding: '14px 32px', fontSize: '13px', letterSpacing: '2px',
               cursor: 'pointer', border: 'none',
               transition: 'background-color 0.2s',
+              fontFamily: 'DM Sans, sans-serif',
             }}>
             SHOP NOW
           </button>
@@ -42,6 +49,7 @@ const HeroSection = () => {
               padding: '14px 32px', fontSize: '13px', letterSpacing: '2px',
               cursor: 'pointer', border: '1px solid #0A0A0A',
               transition: 'background-color 0.2s, color 0.2s',
+              fontFamily: 'DM Sans, sans-serif',
             }}>
             VIEW CATALOG
           </button>
@@ -50,20 +58,19 @@ const HeroSection = () => {
         {/* Stats */}
         <div style={{ display: 'flex', gap: '48px', marginTop: '52px' }}>
           <div>
-            <div style={{ fontSize: '32px', fontWeight: '700', color: '#C9A84C', fontFamily: 'Cormorant Garamond, serif' }}>50k+</div>
-            <div style={{ fontSize: '11px', letterSpacing: '2px', color: '#888', marginTop: '4px' }}>DIGITAL FITS</div>
+            <div style={{ fontSize: '32px', fontWeight: '600', color: '#C9A84C', fontFamily: 'Bodoni Moda, serif' }}>50k+</div>
+            <div style={{ fontSize: '11px', letterSpacing: '2px', color: '#888', marginTop: '4px', fontFamily: 'DM Sans, sans-serif' }}>DIGITAL FITS</div>
           </div>
           <div>
-            <div style={{ fontSize: '32px', fontWeight: '700', color: '#C9A84C', fontFamily: 'Cormorant Garamond, serif' }}>120+</div>
-            <div style={{ fontSize: '11px', letterSpacing: '2px', color: '#888', marginTop: '4px' }}>LUXURY BRANDS</div>
+            <div style={{ fontSize: '32px', fontWeight: '600', color: '#C9A84C', fontFamily: 'Bodoni Moda, serif' }}>120+</div>
+            <div style={{ fontSize: '11px', letterSpacing: '2px', color: '#888', marginTop: '4px', fontFamily: 'DM Sans, sans-serif' }}>LUXURY BRANDS</div>
           </div>
         </div>
       </div>
 
       {/* Right — Image with Latest Drop overlay */}
       <div style={{ position: 'relative', flexShrink: 0 }}>
-        {/* Main image */}
-        <div style={{ width: '520px', height: '560px', backgroundColor: '#1a1a1a', overflow: 'hidden' }}>
+        <div style={{ width: '500px', height: '540px', backgroundColor: '#1a1a1a', overflow: 'hidden' }}>
           <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#555', fontSize: '13px', letterSpacing: '1px' }}>
             [ Hero Image ]
           </div>
@@ -72,20 +79,21 @@ const HeroSection = () => {
         {/* Latest Drop card */}
         <div style={{
           position: 'absolute',
-          bottom: '0px',
-          left: '-60px',
+          bottom: '-30px',
+          left: '-80px',
           backgroundColor: '#fff',
           padding: '24px 28px',
-          width: '220px',
-          boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+          width: '230px',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.10)',
+          zIndex: 2,
         }}>
-          <div style={{ fontSize: '10px', letterSpacing: '3px', color: '#C9A84C', fontWeight: '700', marginBottom: '8px' }}>
+          <div style={{ fontSize: '10px', letterSpacing: '3px', color: '#C9A84C', fontWeight: '700', marginBottom: '10px', fontFamily: 'DM Sans, sans-serif' }}>
             LATEST DROP
           </div>
-          <div style={{ fontSize: '28px', fontWeight: '700', color: '#0A0A0A', lineHeight: '1.15', marginBottom: '8px', fontFamily: 'Cormorant Garamond, serif' }}>
+          <div style={{ fontSize: '30px', fontWeight: '600', color: '#0A0A0A', lineHeight: '1.1', marginBottom: '10px', fontFamily: 'Bodoni Moda, serif' }}>
             Aura<br />Titanium
           </div>
-          <div style={{ fontSize: '13px', color: '#666', lineHeight: '1.5' }}>
+          <div style={{ fontSize: '13px', color: '#666', lineHeight: '1.6', fontFamily: 'DM Sans, sans-serif' }}>
             The lightest frame ever created by Eye Club.
           </div>
         </div>

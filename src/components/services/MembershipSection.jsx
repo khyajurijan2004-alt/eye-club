@@ -1,20 +1,13 @@
+import { useState } from 'react'
+
 const MembershipSection = () => {
+  const [hoveredBtn, setHoveredBtn] = useState(false)
+  const [hoveredBrand, setHoveredBrand] = useState(null)
+
   const features = [
-    {
-      icon: 'BOGO',
-      title: 'Buy One Get One',
-      desc: 'Purchase any luxury frame and get your second pair absolutely free. Share with a friend or double your style.',
-    },
-    {
-      icon: '◎',
-      title: 'Unlimited Eye Tests',
-      desc: 'Priority booking for you and your family at any of our boutiques nationwide.',
-    },
-    {
-      icon: '✦',
-      title: 'Infinite Repairs',
-      desc: 'Lifetime frame adjustments, spare parts, and ultrasonic rejuvenation.',
-    },
+    { icon: 'BOGO', title: 'Buy One Get One', desc: 'Purchase any luxury frame and get your second pair absolutely free. Share with a friend or double your style.' },
+    { icon: '◎', title: 'Unlimited Eye Tests', desc: 'Priority booking for you and your family at any of our boutiques nationwide.' },
+    { icon: '✦', title: 'Infinite Repairs', desc: 'Lifetime frame adjustments, spare parts, and ultrasonic rejuvenation.' },
   ]
 
   const stats = [
@@ -63,11 +56,17 @@ const MembershipSection = () => {
                 </div>
               ))}
             </div>
-            <button style={{
-              backgroundColor: '#0A0A0A', color: '#fff',
-              padding: '14px 32px', fontSize: '13px', letterSpacing: '2px',
-              border: 'none', cursor: 'pointer', fontWeight: '600',
-            }}>
+            <button
+              onMouseEnter={() => setHoveredBtn(true)}
+              onMouseLeave={() => setHoveredBtn(false)}
+              style={{
+                backgroundColor: hoveredBtn ? '#C9A84C' : '#0A0A0A',
+                color: '#fff',
+                padding: '14px 32px', fontSize: '13px', letterSpacing: '2px',
+                border: 'none', cursor: 'pointer', fontWeight: '600',
+                transition: 'background-color 0.2s',
+              }}
+            >
               JOIN THE CLUB
             </button>
           </div>
@@ -85,16 +84,10 @@ const MembershipSection = () => {
       </section>
 
       {/* Referral Banner */}
-      <div style={{
-        backgroundColor: '#8B6914',
-        padding: '18px 80px',
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-      }}>
+      <div style={{ backgroundColor: '#8B6914', padding: '18px 80px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
           <span style={{ color: '#C9A84C', fontSize: '16px' }}>◎</span>
-          <span style={{ fontSize: '14px', color: '#f0e0b0' }}>
-            Refer a friend and you both get a free luxury accessory kit!
-          </span>
+          <span style={{ fontSize: '14px', color: '#f0e0b0' }}>Refer a friend and you both get a free luxury accessory kit!</span>
         </div>
         <span style={{ fontSize: '12px', fontWeight: '700', letterSpacing: '2px', color: '#f0e0b0', cursor: 'pointer', whiteSpace: 'nowrap' }}>
           REFER & EARN NOW →
@@ -114,16 +107,26 @@ const MembershipSection = () => {
               <div style={{ flex: 1, height: '1px', backgroundColor: '#eee', maxWidth: '120px' }} />
             </div>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              {items.map((brand, i) => (
-                <div key={i} style={{
-                  padding: '10px 24px',
-                  border: '1px solid #e5e5e5',
-                  fontSize: '12px', letterSpacing: '2px', color: '#444',
-                  cursor: 'pointer', fontWeight: '600',
-                }}>
-                  {brand}
-                </div>
-              ))}
+              {items.map((brand, i) => {
+                const key = `${group}-${i}`
+                return (
+                  <div
+                    key={i}
+                    onMouseEnter={() => setHoveredBrand(key)}
+                    onMouseLeave={() => setHoveredBrand(null)}
+                    style={{
+                      padding: '10px 24px',
+                      border: `1px solid ${hoveredBrand === key ? '#C9A84C' : '#e5e5e5'}`,
+                      fontSize: '12px', letterSpacing: '2px',
+                      color: hoveredBrand === key ? '#C9A84C' : '#444',
+                      cursor: 'pointer', fontWeight: '600',
+                      transition: 'border-color 0.2s, color 0.2s',
+                    }}
+                  >
+                    {brand}
+                  </div>
+                )
+              })}
             </div>
           </div>
         ))}

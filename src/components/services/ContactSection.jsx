@@ -1,15 +1,16 @@
 import { useState } from 'react'
 
 const contactCards = [
-  { icon: '☎', label: 'CALL US', value: '+977 1 4422XXX' },
-  { icon: '✉', label: 'WHATSAPP', value: '+977 9801XXXXXX' },
-  { icon: '◎', label: 'EMAIL', value: 'boutique@eyeclub.com' },
-  { icon: '◉', label: 'STORES', value: 'Durbar Marg & Pulchowk' },
+  { icon: '✆', label: 'CALL US', value: '+977 1 4422XXX' },
+  { icon: '⊟', label: 'WHATSAPP', value: '+977 9801XXXXXX' },
+  { icon: '✉', label: 'EMAIL', value: 'boutique@eyeclub.com' },
+  { icon: '◎', label: 'STORES', value: 'Durbar Marg & Pulchowk' },
 ]
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: '', email: '', interest: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [hoveredBtn, setHoveredBtn] = useState(false)
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
@@ -27,17 +28,28 @@ const ContactSection = () => {
 
   return (
     <section style={{ backgroundColor: '#F5F0E8', padding: '80px 80px' }}>
-
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'Stretch' }}>
 
         {/* Left — Contact cards */}
-        <div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+        <div style={{ height: '100%', display: 'flex', alignItems: 'center' }}>
+  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', width: '100%' }}>
             {contactCards.map((card, i) => (
               <div key={i} style={{ backgroundColor: '#fff', padding: '28px 24px', border: '1px solid #e8e3db' }}>
-                <div style={{ fontSize: '20px', color: '#C9A84C', marginBottom: '12px' }}>{card.icon}</div>
-                <div style={{ fontSize: '11px', fontWeight: '700', letterSpacing: '2px', color: '#888', marginBottom: '6px' }}>{card.label}</div>
-                <div style={{ fontSize: '15px', color: '#0A0A0A', fontWeight: '500' }}>{card.value}</div>
+                <div style={{
+                  fontSize: '18px',
+                  color: '#C9A84C',
+                  marginBottom: '12px',
+                  fontFamily: 'serif',
+                  lineHeight: 1,
+                }}>
+                  {card.icon}
+                </div>
+                <div style={{ fontSize: '11px', fontWeight: '700', letterSpacing: '2px', color: '#888', marginBottom: '6px' }}>
+                  {card.label}
+                </div>
+                <div style={{ fontSize: '14px', color: '#0A0A0A', fontWeight: '500' }}>
+                  {card.value}
+                </div>
               </div>
             ))}
           </div>
@@ -45,7 +57,7 @@ const ContactSection = () => {
 
         {/* Right — Form */}
         <div>
-          <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#0A0A0A', marginBottom: '32px' }}>
+          <h2 style={{ fontSize: '36px', fontWeight: '700', color: '#0A0A0A', marginBottom: '32px', fontFamily: 'Cormorant Garamond, serif' }}>
             Send an Inquiry
           </h2>
 
@@ -84,11 +96,14 @@ const ContactSection = () => {
               />
               <button
                 onClick={() => { if (form.name && form.email && form.message) setSent(true) }}
+                onMouseEnter={() => setHoveredBtn(true)}
+                onMouseLeave={() => setHoveredBtn(false)}
                 style={{
-                  backgroundColor: '#0A0A0A', color: '#fff',
+                  backgroundColor: hoveredBtn ? '#C9A84C' : '#0A0A0A',
+                  color: '#fff',
                   padding: '14px', fontSize: '12px', letterSpacing: '2px',
                   border: 'none', cursor: 'pointer', fontWeight: '700',
-                  opacity: (!form.name || !form.email || !form.message) ? 0.5 : 1,
+                  transition: 'background-color 0.2s',
                 }}
               >
                 SEND MESSAGE

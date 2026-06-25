@@ -31,31 +31,28 @@ const BoutiqueSection = () => {
 
   return (
     <section style={{
-      backgroundColor: '#EDEAE3',
-      padding: '80px',
+      backgroundColor: '#fff',
       display: 'flex',
-      alignItems: 'center',
-      gap: '80px',
+      alignItems: 'flex-start',
       minHeight: '700px',
     }}>
 
-      {/* Left Image */}
+      {/* Left Image — no padding, flush to edge */}
       <div style={{ position: 'relative', flexShrink: 0 }}>
         <div style={{
           backgroundColor: '#fff',
-          padding: '20px',
-          boxShadow: '0 4px 32px rgba(0,0,0,0.08)',
+          padding: '20px 20px 20px 20px',
+          boxShadow: '4px 0 20px rgba(0,0,0,0.06)',
         }}>
           <div style={{
-            width: '440px',
-            height: '560px',
+            width: '480px',
+            height: '620px',
             backgroundColor: '#c8c4bc',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             color: '#999',
             fontSize: '13px',
-            letterSpacing: '1px',
           }}>
             [ Boutique Image ]
           </div>
@@ -77,15 +74,15 @@ const BoutiqueSection = () => {
       </div>
 
       {/* Right Content */}
-      <div style={{ flex: 1 }}>
+      <div style={{ flex: 1, padding: '80px 80px 80px 60px' }}>
         <h2 style={{
-          fontSize: '72px',
+          fontSize: '80px',
           fontWeight: '400',
           color: '#0A0A0A',
-          lineHeight: '1.05',
+          lineHeight: '1.0',
           marginBottom: '28px',
           fontFamily: '"Bodoni Moda", serif',
-          letterSpacing: '-1px',
+          letterSpacing: '-2px',
         }}>
           Hyper-Realistic<br />Virtual Boutique
         </h2>
@@ -95,13 +92,12 @@ const BoutiqueSection = () => {
           color: '#555',
           lineHeight: '1.8',
           marginBottom: '40px',
-          maxWidth: '480px',
+          maxWidth: '460px',
           fontFamily: '"DM Sans", sans-serif',
         }}>
           Experience frames in stunning detail before you buy. Our augmented reality engine renders light reflection, material texture, and shadow in real-time.
         </p>
 
-        {/* Feature List */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           {features.map((feature, index) => (
             <div key={index} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>

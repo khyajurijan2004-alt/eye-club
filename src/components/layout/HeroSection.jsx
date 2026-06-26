@@ -122,7 +122,7 @@ const HeroSection = () => {
         {/* Hero Image */}
         <div style={{ width: '500px', height: '560px', overflow: 'hidden' }}>
           <img
-           src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=800&q=80&fit=crop"
+          src="/src/assets/Luxury Eyewear.png"
             alt="Luxury Eyewear"
             style={{
               width: '100%',

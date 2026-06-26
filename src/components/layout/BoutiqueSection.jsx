@@ -6,16 +6,16 @@ const BoutiqueSection = () => {
       title: 'TRUE MIRROR™ REFLECTION',
       desc: 'See how light interacts with gold and acetate finishes.',
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="1.5">
-          <path d="M12 3L13.5 8h5l-4 3 1.5 5L12 13l-4 3 1.5-5-4-3h5z"/>
-          <line x1="12" y1="1" x2="12" y2="3"/>
-          <line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/>
-          <line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="1.5">
+          <circle cx="12" cy="12" r="4"/>
+          <line x1="12" y1="2" x2="12" y2="4" strokeLinecap="round"/>
+          <line x1="12" y1="20" x2="12" y2="22" strokeLinecap="round"/>
+          <line x1="2" y1="12" x2="4" y2="12" strokeLinecap="round"/>
+          <line x1="20" y1="12" x2="22" y2="12" strokeLinecap="round"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" strokeLinecap="round"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" strokeLinecap="round"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" strokeLinecap="round"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" strokeLinecap="round"/>
         </svg>
       ),
     },
@@ -23,8 +23,10 @@ const BoutiqueSection = () => {
       title: '1:1 SIZE ACCURACY',
       desc: 'Calculated dimensions ensure the frame looks exactly as it will on your face.',
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="1.5">
-          <rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="1.5">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <polyline points="7 4 7 8 2 8" fill="none"/>
+          <polyline points="17 20 17 16 22 16" fill="none"/>
         </svg>
       ),
     },
@@ -32,8 +34,12 @@ const BoutiqueSection = () => {
       title: '360° MOVEMENT',
       desc: 'Turn your head naturally; the glasses stay anchored with zero latency.',
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="1.5">
-          <polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4-4.64 4.36A9 9 0 0 1 3.51 15"/>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" strokeWidth="1.5">
+          <path d="M12 2a10 10 0 0 1 7.07 17.07" strokeLinecap="round"/>
+          <path d="M12 22a10 10 0 0 1-7.07-17.07" strokeLinecap="round"/>
+          <polyline points="16 6 19 3 22 6"/>
+          <polyline points="8 18 5 21 2 18"/>
+          <text x="12" y="14" textAnchor="middle" fontSize="5" fontWeight="bold" fill="#C9A84C" stroke="none" fontFamily="DM Sans, sans-serif">3D</text>
         </svg>
       ),
     },
@@ -41,13 +47,13 @@ const BoutiqueSection = () => {
 
   return (
     <section style={{
-  backgroundColor: '#fff',
-  display: 'flex',
-  alignItems: 'center',
-  minHeight: '700px',
-  padding: '80px 80px 80px 120px',
-  gap: '80px',
-}}>
+      backgroundColor: '#fff',
+      display: 'flex',
+      alignItems: 'center',
+      minHeight: '700px',
+      padding: '80px 80px 80px 120px',
+      gap: '80px',
+    }}>
 
       {/* Left Image */}
       <div style={{ position: 'relative', flexShrink: 0 }}>
@@ -71,7 +77,6 @@ const BoutiqueSection = () => {
             />
           </div>
         </div>
-        {/* LIVE VIEW badge */}
         <div style={{
           position: 'absolute',
           top: '40px',
@@ -130,7 +135,7 @@ const BoutiqueSection = () => {
                 </div>
                 <div style={{
                   fontSize: '14px',
-                  color: '#666',
+                  color: '#0A0A0A',
                   lineHeight: '1.7',
                   fontFamily: '"DM Sans", sans-serif',
                 }}>

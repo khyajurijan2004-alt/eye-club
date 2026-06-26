@@ -45,7 +45,7 @@ const CollectionsSection = () => {
       icon: (
         <svg width="42" height="42" viewBox="0 0 44 44" fill="none">
           <rect x="2" y="14" width="8" height="16" rx="4" fill="#3D3D3D" />
-          <rect x="13" y="10" width="18" height="24" rx="4" fill="none" stroke="#3D3D3D" strokeWidth="2.5" />
+          <rect x="15" y="10" width="14" height="24" rx="4" fill="none" stroke="#3D3D3D" strokeWidth="2.5" />
           <rect x="34" y="14" width="8" height="16" rx="4" fill="#3D3D3D" />
         </svg>
       )

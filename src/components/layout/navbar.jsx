@@ -47,7 +47,7 @@ const Navbar = () => {
         <div style={{ display: 'flex', gap: '36px', alignItems: 'center' }}>
           {[
             { label: 'AI FACE SCAN', to: '/', hasArrow: true },
-            { label: 'VIRTUAL TRY-ON', to: '/', hasArrow: true },
+            { label: 'VIRTUAL TRY-ON', to: '/try-on', hasArrow: true },
             { label: 'MEMBERSHIP', to: '/services', hasArrow: false },
             { label: 'APPOINTMENTS', to: '/services', hasArrow: false },
             { label: 'CONTACT', to: '/services', hasArrow: false },
